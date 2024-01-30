@@ -5,25 +5,15 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   plugins: [
 		new HTMLWebpackPlugin({
-			filename: './index.html',
+			filename: 'index.html',
 		}),
 		new CleanWebpackPlugin(),
 	],
   mode: 'development',
   entry: {
-    header: {
-			import: './modules/header/header.js',
-			dependOn: 'shared',
-		},
-    body: {
-			import: './modules/body/body.js',
-			dependOn: 'shared',
-		},
-		footer: {
-			import: './modules/footer/footer.js',
-			dependOn: 'shared',
-		},
-		shared: 'jquery',
+    header: './modules/header/header.js',
+    body: './modules/body/body.js',
+		footer: './modules/footer/footer.js',
   },
   output: {
     filename: '[name].bundle.js',
@@ -33,19 +23,11 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'csss-loader'],
+        use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/'
-            }
-          },
-        ],
+        test: /\.(png|jpg|gif|svg)$/i,
+        type: 'asset/resource',
       },
     ],
   },
@@ -53,6 +35,8 @@ module.exports = {
     contentBase: path.join(__dirname, './public'),
     compress: true,
     port: 8564,
+    open: true,
+    hot: true,
   },
   optimization: {
 		splitChunks: {
@@ -61,6 +45,8 @@ module.exports = {
   },
   performance: {
 		maxAssetSize: 1000000,
+    hints: false,
+    maxEntrypointSize: 1000000,
 	},
   devtool: 'inline-source-map',
 };
