@@ -1,0 +1,38 @@
+.App {
+  width: 90vw;
+  height: 90vh;
+}
+.App-header {
+  display: flex;
+}
+.logo {
+  width: 150px;
+  height: 150px;
+}
+.header-text {
+  display: flex;
+  color: crimson;
+  align-items: center;
+}
+.App-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-top: 3px solid crimson;
+  border-bottom: 3px solid crimson;
+  height: 70%;
+}
+
+.App-footer {
+  display: flex;
+  justify-content: center;
+}
+#email, #password {
+  width: 200px;
+  margin: 10px;
+}
+.submit {
+  width: 50px;
+  margin-top: 10px;
+}

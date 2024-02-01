@@ -1,0 +1,28 @@
+.App {
+  width: 90vw;
+  height: 90vh;
+}
+.App-header {
+  display: flex;
+}
+.logo {
+  width: 150px;
+  height: 150px;
+}
+.header-text {
+  display: flex;
+  color: crimson;
+  align-items: center;
+}
+.App-body {
+  border-top: 3px solid crimson;
+  border-bottom: 3px solid crimson;
+  height: 70%;
+}
+.body-text {
+  padding: 20px;
+}
+.App-footer {
+  display: flex;
+  justify-content: center;
+}
