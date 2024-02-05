@@ -1,0 +1,17 @@
+.App-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 3px solid crimson;
+    border-bottom: 3px solid crimson;
+    height: 70%;
+}
+#email, #password {
+    width: 200px;
+    margin: 10px;
+}
+.submit {
+    width: 50px;
+    margin-top: 10px;
+}
