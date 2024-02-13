@@ -1,0 +1,19 @@
+.Notifications {
+  padding-right: 1rem;
+  margin: 1rem 2rem;
+} 
+[data-type="default"] {
+  color: blue;
+}
+
+[data-urgent],
+[data-type="urgent"] {
+  color: red;
+}
+.menuItem {
+  position: absolute;
+  top: auto;
+  right: 5rem;
+  margin-bottom: 2rem;
+}
+

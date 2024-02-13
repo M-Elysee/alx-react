@@ -1,0 +1,13 @@
+.App-header {
+  display: flex;
+  width: 10vw;
+}
+.logo {
+  width: 150px;
+  height: 150px;
+}
+.header-text {
+  display: flex;
+  color: crimson;
+  align-items: center;
+}
