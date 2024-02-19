@@ -5,6 +5,18 @@ import PropTypes from "prop-types";
 import NotificationItemShape from "./NotificationItemShape";
 import {StyleSheet, css} from "aphrodite";
 
+
+const opacityAnimation = {
+  '0%': { opacity: 0.5 },
+  '100%': { opacity: 1}
+};
+
+const bounceAnimation = {
+  '0%': { transform: 'translateY(0px)' },
+  '33%': { transform: 'translateY(-5px)'},
+  '66%': { transform: 'translateY(5px)'},
+  '100%': { transform: 'translateY(0px)'},
+};
 const style = StyleSheet.create({
   Notifications: {
     height: "100vh",
@@ -25,6 +37,12 @@ const style = StyleSheet.create({
     top: "auto",
     right: "1rem",
     marginBottom: "2rem",
+    ":hover": {
+      cursor: 'pointer',
+      animationName: [opacityAnimation, bounceAnimation],
+      animationDuration: '1s, 0.5s',
+      animationIterationCount: '3'
+    }
   }
 });
 
@@ -87,7 +105,7 @@ Notifications.propTypes = {
 };
 
 Notifications.defaultProps = {
-  displayDrawer: true,
+  displayDrawer: false,
   notifications: [],
 };
 
