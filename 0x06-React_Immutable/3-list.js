@@ -1,7 +1,8 @@
-export function getListObject(array) {
-    const { List } = require("immutable");
-    return List([...array]);
+import { List } from 'immutable';
+
+export function getListObject (array) {
+  return List([...array]);
 }
-export function addElementToList(list, element) {
-    return list.concat(element);
+export function addElementToList (list, element) {
+  return list.concat(element);
 }
