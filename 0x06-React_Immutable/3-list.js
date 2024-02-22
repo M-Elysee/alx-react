@@ -1,4 +1,3 @@
-#!/usr/bin/node
 export function getListObject(array) {
     const { List } = require("immutable");
     return List([...array]);
