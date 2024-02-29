@@ -1,5 +1,5 @@
 {
-  "homepage": "https://M-Elysee.github.io/alx-react/0x01-react_intro/task_4/dashboard",
+  "homepage": "https://m-elysee.github.io/alx-react/",
   "name": "dashboard",
   "version": "0.1.0",
   "private": true,
@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d public"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

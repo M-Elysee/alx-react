@@ -3,7 +3,7 @@ import Header from '../Header/Header.js';
 import Footer from '../Footer/Footer.js';
 import Login from '../Login/Login.js';
 import Notifications from '../Notifications/Notifications.js';
-import React from 'react';
+import React, {Component } from 'react';
 import CourseList from "../CourseList/CourseList.js";
 import PropTypes from "prop-types";
 import { getLatestNotification } from "../utils/utils.js";
@@ -21,19 +21,21 @@ const notifications = [
   { id: 3, type: "urgent", html: getLatestNotification() },
 ];
 
-function App({isLoggedIn}) {
-  return (
-    <React.Fragment>
-      <div className="App">
-        <div className="heading-section">
-          <Header />
-          <Notifications notifications={notifications} />
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <div className="App">
+          <div className="heading-section">
+            <Header />
+            <Notifications notifications={notifications} />
+          </div>
+          {this.props.isLoggedIn ? <CourseList courses={courses} /> : <Login />}
+          <Footer />
         </div>
-        {isLoggedIn ? <CourseList courses={courses} /> : <Login />}
-        <Footer />
-      </div>
-    </React.Fragment>
-  );
+      </React.Fragment>
+    );
+  }
 }
 
 App.defaultProps = {

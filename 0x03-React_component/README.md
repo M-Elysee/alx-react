@@ -268,4 +268,4 @@ Repo:
 
 GitHub repository: alx-react
 Directory: 0x03-React_component
-File: task_5/dashboard/src/Notifications/Notificat
+File: task_5/dashboard/src/Notifications/Notifications
